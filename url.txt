@@ -1,0 +1,6 @@
+sobre a definição de url/urn/uri:
+
+
+url: http://127.0.0.1:5000
+urn: /100
+uri: http://127.0.0.1:5000/100
