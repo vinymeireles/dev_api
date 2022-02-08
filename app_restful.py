@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 import json
-from habilidades import Habilidades
+from habilidades import Habilidades, ListaHabilidades
 
 app = Flask(__name__)
 api = Api(app)
@@ -55,8 +55,8 @@ class ListaDesenvolvedores(Resource):
 #criando e registrando as rotas em restful
 api.add_resource(Desenvolvedor, '/dev/<int:id>/')      
 api.add_resource(ListaDesenvolvedores, '/dev/')
-api.add_resource(Habilidades, '/habilidades/')
-
+api.add_resource(ListaHabilidades, '/habilidades/')
+api.add_resource(Habilidades, '/habilidades/<int:id>/')
 
 
 if __name__ == '__main__':
